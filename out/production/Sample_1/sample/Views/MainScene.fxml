@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.MainController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="148.0" prefHeight="720.0" prefWidth="240.0" style="-fx-background-color: #fbeaff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="20.0" layoutY="215.0" prefHeight="720.0" prefWidth="61.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <JFXButton fx:id="mCTBtn" alignment="CENTER_RIGHT" layoutX="5.0" layoutY="198.0" onAction="#changePane" prefHeight="98.0" prefWidth="245.0" style="-fx-background-color: transparent;" stylesheets="@../Assets/fullpackstyling.css" text="Create Transaction" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="-5.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="mTDBtn" alignment="CENTER_RIGHT" layoutY="295.0" onAction="#changePane" prefHeight="98.0" prefWidth="239.0" style="-fx-background-color: transparent;" stylesheets="@../Assets/fullpackstyling.css" text="Transaction Data" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="mSupportBtn" alignment="CENTER_RIGHT" layoutY="392.0" onAction="#changePane" prefHeight="98.0" prefWidth="239.0" style="-fx-background-color: transparent;" stylesheets="@../Assets/fullpackstyling.css" text="Support        " wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+            <ImageView disable="true" fitHeight="98.0" fitWidth="61.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/outline_create_black_48dp.png" />
+               </image>
+            </ImageView>
+            <ImageView disable="true" fitHeight="98.0" fitWidth="61.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/outline_history_black_48dp.png" />
+               </image>
+            </ImageView>
+            <ImageView disable="true" fitHeight="98.0" fitWidth="61.0" layoutY="412.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/outline_support_agent_black_48dp.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="mAccountBtn" alignment="CENTER_RIGHT" layoutY="99.0" onAction="#changePane" prefHeight="98.0" prefWidth="245.0" style="-fx-background-color: transparent;" stylesheets="@../Assets/fullpackstyling.css" text="Account        " wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+            <ImageView disable="true" fitHeight="98.0" fitWidth="61.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/outline_account_circle_black_48dp.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="mLogoutBtn" alignment="CENTER_RIGHT" layoutY="492.0" onAction="#logOut" prefHeight="98.0" prefWidth="239.0" style="-fx-background-color: transparent;" text="Logout        " wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+            <ImageView disable="true" fitHeight="61.0" fitWidth="61.0" layoutY="511.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/logout.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="51.0" fitWidth="43.0" layoutX="70.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/baseline_atm_black_48dp.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="mAtmLabel" layoutX="125.0" layoutY="20.0" text="#015">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow radius="9.75" width="20.0" />
+         </effect>
+      </AnchorPane>
+      <AnchorPane fx:id="mAccountPane" layoutX="240.0" layoutY="111.0" prefHeight="720.0" prefWidth="840.0" style="-fx-background-color: grey;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="120.0" prefWidth="840.0" style="-fx-background-color: #845EC2;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="42.0" layoutY="52.0" text="Personal Infomation" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="30.0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="455.0" layoutY="30.0" text="Account Number:" textFill="WHITE" AnchorPane.rightAnchor="152.0" AnchorPane.topAnchor="30.0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="703.0" layoutY="30.0" text="#281100" textFill="WHITE" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="30.0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="7.0" layoutY="120.0" prefHeight="194.0" prefWidth="840.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="280.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0">
+               <children>
+                  <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="43.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="100.0">
+                     <image>
+                        <Image url="@../Assets/user.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="138.0" layoutY="7.0" text="Name              :">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="138.0" layoutY="207.0" text="Personal ID      :">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="138.0" layoutY="107.0" text="Phone number:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="138.0" layoutY="157.0" text="Address           :">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="138.0" layoutY="57.0" text="Email               :">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="138.0" layoutY="257.0" text="Member since :">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="278.0" layoutY="7.0" prefHeight="40.0" prefWidth="556.0" text="Micheal Colonel" AnchorPane.leftAnchor="278.0" AnchorPane.rightAnchor="2.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" right="30.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="278.0" layoutY="57.0" prefHeight="40.0" prefWidth="556.0" text="MColonel@gmail.com" AnchorPane.leftAnchor="278.0" AnchorPane.rightAnchor="2.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" right="30.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="278.0" layoutY="107.0" prefHeight="40.0" prefWidth="556.0" text="0982481842" AnchorPane.leftAnchor="278.0" AnchorPane.rightAnchor="2.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" right="30.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="278.0" layoutY="157.0" prefHeight="40.0" prefWidth="556.0" text="23 Avenue St, Bank Road" AnchorPane.leftAnchor="278.0" AnchorPane.rightAnchor="2.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" right="30.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="280.0" layoutY="207.0" prefHeight="40.0" prefWidth="556.0" text="281221581" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" right="30.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="278.0" layoutY="257.0" prefHeight="40.0" prefWidth="556.0" text="23/11/2019" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" right="30.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <JFXButton layoutX="7.0" layoutY="235.0" prefHeight="44.0" prefWidth="126.0" style="-fx-border-color: black; -fx-border-radius: 1em; -fx-background-color: #fbeaff; -fx-background-radius: 1em;" text="Change Info">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="7.0" layoutY="440.0" prefHeight="283.0" prefWidth="840.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="35.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="80.0">
+                     <image>
+                        <Image url="@../Assets/baseline_credit_card_black_48dp.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="136.0" layoutY="67.0" text="Card number   :">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="136.0" layoutY="167.0" text="Creation Date :" AnchorPane.leftAnchor="138.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="136.0" layoutY="117.0" text="PIN                  :" AnchorPane.leftAnchor="138.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="276.0" layoutY="67.0" prefHeight="40.0" prefWidth="556.0" text="136974823015" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" right="30.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="276.0" layoutY="117.0" prefHeight="40.0" prefWidth="556.0" text="******" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" right="30.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="276.0" layoutY="167.0" prefHeight="40.0" prefWidth="556.0" text="23/11/2019" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" right="30.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <JFXButton layoutX="7.0" layoutY="200.0" prefHeight="44.0" prefWidth="126.0" style="-fx-border-color: black; -fx-border-radius: 1em; -fx-background-color: #fbeaff; -fx-background-radius: 1em;" text="Change PIN">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <Line endX="709.5" endY="-8.0" layoutX="130.0" layoutY="45.0" startX="-130.0" startY="-8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0" />
+               </children></AnchorPane>
+         </children></AnchorPane>
+      <AnchorPane fx:id="mCreateTransactionPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="45.0" layoutY="39.0" prefHeight="120.0" prefWidth="840.0" style="-fx-background-color: #845EC2;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="27.0" layoutY="38.0" text="Please chose type of transaction" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="30.0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="203.0" layoutY="217.0" prefHeight="600.0" prefWidth="840.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <JFXButton layoutX="150.0" layoutY="175.0" prefHeight="100.0" prefWidth="250.0" style="-fx-background-radius: 2em; -fx-border-radius: 2em; -fx-border-color: black; -fx-background-color: #f3c5ff;" text="Withdrawal" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="175.0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton layoutX="440.0" layoutY="175.0" prefHeight="100.0" prefWidth="250.0" style="-fx-background-radius: 2em; -fx-border-radius: 2em; -fx-border-color: black; -fx-background-color: #00c9a7;" text="Deposit" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="175.0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton layoutX="150.0" layoutY="325.0" prefHeight="100.0" prefWidth="250.0" style="-fx-background-radius: 2em; -fx-border-radius: 2em; -fx-border-color: black; -fx-background-color: #fefedf;" text="Transfer" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="325.0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton layoutX="440.0" layoutY="325.0" prefHeight="100.0" prefWidth="276.0" style="-fx-background-radius: 2em; -fx-border-radius: 2em; -fx-border-color: black; -fx-background-color: #d7e8f0;" text="Provider Payment" AnchorPane.rightAnchor="124.0" AnchorPane.topAnchor="325.0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </JFXButton>
+                  <Label layoutX="182.0" layoutY="41.0" text="Current balance:">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="451.0" layoutY="41.0" text="1,0000,000 $">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="mTransactionDataPane" layoutX="250.0" prefHeight="720.0" prefWidth="830.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="7.0" prefHeight="120.0" prefWidth="840.0" style="-fx-background-color: #845EC2;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="27.0" layoutY="38.0" text="History of Transaction" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="30.0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="600.0" prefWidth="840.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" layoutX="44.0" layoutY="102.0" prefHeight="30.0" prefWidth="800.0" style="-fx-background-color: #fbeaff;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="80.0">
+                     <children>
+                        <Label layoutX="699.0" layoutY="10.0" prefWidth="100.0" text=" ">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label alignment="CENTER" prefWidth="160.0" text="Transaction ID">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="10.0" layoutY="26.0" prefWidth="160.0" text="Transaction Type">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="137.0" layoutY="26.0" prefWidth="160.0" text="Amount">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="287.0" layoutY="26.0" prefWidth="160.0" text="Date Time">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label layoutX="574.0" layoutY="10.0" prefWidth="50.0" text=" ">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <VBox fx:id="mTransactionListPane" layoutX="20.0" layoutY="115.0" prefHeight="470.0" prefWidth="800.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+               </children></AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

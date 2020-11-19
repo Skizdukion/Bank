@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="65.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="49.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Assets/transaction.png" />
+         </image>
+         <HBox.margin>
+            <Insets left="10.0" />
+         </HBox.margin>
+      </ImageView>
+      <Label alignment="CENTER" minWidth="150.0" prefWidth="160.0" text="236410">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <HBox.margin>
+            <Insets left="50.0" />
+         </HBox.margin>
+      </Label>
+      <Label alignment="CENTER" layoutX="63.0" layoutY="20.0" minWidth="150.0" prefWidth="160.0" text="Withdrawal">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+      </Label>
+      <Label alignment="CENTER" layoutX="128.0" layoutY="20.0" maxWidth="200.0" minWidth="150.0" prefWidth="160.0" text="2,000,000$">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+      </Label>
+      <Label alignment="CENTER" layoutX="228.0" layoutY="20.0" maxWidth="160.0" minWidth="150.0" prefWidth="160.0" text="28/11/2020">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+      </Label>
+      <JFXButton ellipsisString="" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" style="-fx-border-color: black; -fx-border-radius: 2em; -fx-background-radius: 3em; -fx-background-color: #fefedf;" text="..">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Assets/baseline_read_more_black_18dp.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+   <padding>
+      <Insets bottom="5.0" top="5.0" />
+   </padding>
+</HBox>
