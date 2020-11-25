@@ -4,12 +4,17 @@ package sample.Controller;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import sample.Models.TransactionModel;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -41,6 +46,18 @@ public class ItemController implements Initializable {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setContentText("evoke by: " + mTransactionID.getText());
         alert.show();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/FormPopup/TransactionDetail.fxml"));
+        Scene newScene;
+        try {
+            newScene = new Scene(loader.load());
+            Stage newStage = new Stage();
+            newStage.setScene(newScene);
+            newStage.setResizable(false);
+            newStage.initModality(Modality.APPLICATION_MODAL);
+            newStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     public static void initModel(TransactionModel tModel)
     {

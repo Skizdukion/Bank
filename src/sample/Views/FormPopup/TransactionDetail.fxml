@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
@@ -10,14 +9,9 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="500.0" style="-fx-background-color: #d5e9f1;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.PopupController.ChangeInfoController" >
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="500.0" style="-fx-background-color: #d5e9f1;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.PopupController.TransactionDetailController">
    <children>
-      <JFXButton layoutX="249.0" layoutY="730.0" onAction="#Save" style="-fx-background-radius: 2em; -fx-border-radius: 2em; -fx-border-color: black; -fx-background-color: #d5cabd;" text="Save">
-         <font>
-            <Font size="30.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="357.0" layoutY="730.0" onAction="#Close" style="-fx-background-radius: 2em; -fx-border-radius: 2em; -fx-border-color: black; -fx-background-color: #fefedf;" text="Cancel">
+      <JFXButton layoutX="396.0" layoutY="729.0" onAction="#Close" style="-fx-background-radius: 2em; -fx-border-radius: 2em; -fx-border-color: black; -fx-background-color: #d5cabd;" text="OK">
          <font>
             <Font size="30.0" />
          </font>
@@ -30,7 +24,7 @@
       <Line endX="300.5" layoutX="186.0" layoutY="45.0" startX="-100.0" />
       <AnchorPane layoutX="14.0" layoutY="82.0" prefHeight="643.0" prefWidth="475.0" style="-fx-background-color: white; -fx-background-radius: 1em; -fx-border-radius: 1em;">
          <children>
-            <Label layoutX="30.0" layoutY="30.0" prefHeight="51.0" prefWidth="145.0" text="Name              :" AnchorPane.leftAnchor="20.0">
+            <Label layoutX="30.0" layoutY="30.0" prefHeight="51.0" prefWidth="145.0" text="ID                    :" AnchorPane.leftAnchor="20.0">
                <font>
                   <Font size="21.0" />
                </font>
@@ -41,7 +35,7 @@
                   <Insets />
                </opaqueInsets>
             </Label>
-            <Label layoutX="29.0" layoutY="130.0" prefHeight="51.0" prefWidth="145.0" text="Personal ID      :" AnchorPane.leftAnchor="20.0">
+            <Label layoutX="29.0" layoutY="130.0" prefHeight="51.0" prefWidth="145.0" text="Type                :" AnchorPane.leftAnchor="20.0">
                <font>
                   <Font size="21.0" />
                </font>
@@ -52,7 +46,7 @@
                   <Insets />
                </opaqueInsets>
             </Label>
-            <Label layoutX="31.0" layoutY="530.0" prefHeight="51.0" prefWidth="145.0" text="Phone number:" AnchorPane.leftAnchor="20.0">
+            <Label layoutX="31.0" layoutY="530.0" prefHeight="51.0" prefWidth="145.0" text="More Detail     :" AnchorPane.leftAnchor="20.0">
                <font>
                   <Font size="21.0" />
                </font>
@@ -63,7 +57,7 @@
                   <Insets />
                </opaqueInsets>
             </Label>
-            <Label layoutX="30.0" layoutY="430.0" prefHeight="51.0" prefWidth="145.0" text="Address           :" AnchorPane.leftAnchor="20.0">
+            <Label layoutX="30.0" layoutY="430.0" prefHeight="51.0" prefWidth="145.0" text="ATM ID            :" AnchorPane.leftAnchor="20.0">
                <font>
                   <Font size="21.0" />
                </font>
@@ -74,7 +68,7 @@
                   <Insets />
                </opaqueInsets>
             </Label>
-            <Label layoutX="32.0" layoutY="230.0" prefHeight="51.0" prefWidth="145.0" text="Member since :" AnchorPane.leftAnchor="20.0">
+            <Label layoutX="32.0" layoutY="230.0" prefHeight="51.0" prefWidth="145.0" text="Amount           :" AnchorPane.leftAnchor="20.0">
                <font>
                   <Font size="21.0" />
                </font>
@@ -85,7 +79,7 @@
                   <Insets />
                </opaqueInsets>
             </Label>
-            <Label layoutX="31.0" layoutY="330.0" prefHeight="51.0" prefWidth="145.0" text="Email               :" AnchorPane.leftAnchor="20.0">
+            <Label layoutX="31.0" layoutY="330.0" prefHeight="51.0" prefWidth="145.0" text="Date Time        :" AnchorPane.leftAnchor="20.0">
                <font>
                   <Font size="21.0" />
                </font>
@@ -129,18 +123,39 @@
                   <Insets />
                </opaqueInsets>
             </Label>
-            <JFXTextField layoutX="175.0" layoutY="330.0" prefHeight="51.0" prefWidth="299.0" AnchorPane.rightAnchor="10.0">
+            <Label alignment="CENTER_RIGHT" layoutX="168.0" layoutY="330.0" prefHeight="51.0" prefWidth="299.0" text="None change" AnchorPane.rightAnchor="10.0">
                <font>
                   <Font size="21.0" />
-               </font></JFXTextField>
-            <JFXTextField layoutX="165.0" layoutY="430.0" prefHeight="51.0" prefWidth="299.0" AnchorPane.rightAnchor="10.0">
+               </font>
+               <padding>
+                  <Insets bottom="10.0" right="10.0" top="10.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="168.0" layoutY="430.0" prefHeight="51.0" prefWidth="299.0" text="None change" AnchorPane.rightAnchor="10.0">
                <font>
                   <Font size="21.0" />
-               </font></JFXTextField>
-            <JFXTextField layoutX="165.0" layoutY="530.0" prefHeight="51.0" prefWidth="299.0" AnchorPane.rightAnchor="10.0">
+               </font>
+               <padding>
+                  <Insets bottom="10.0" right="10.0" top="10.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="168.0" layoutY="530.0" prefHeight="51.0" prefWidth="299.0" text="None change" AnchorPane.rightAnchor="10.0">
                <font>
                   <Font size="21.0" />
-               </font></JFXTextField>
+               </font>
+               <padding>
+                  <Insets bottom="10.0" right="10.0" top="10.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
          </children>
       </AnchorPane>
    </children>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="409.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.PopupController.DepositController">
+   <children>
+      <AnchorPane fx:id="mAmountPane" layoutX="10.0" layoutY="10.0" prefHeight="419.0" prefWidth="710.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="120.0" prefWidth="700.0" style="-fx-background-color: #009efa;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Label prefHeight="73.0" prefWidth="277.0" text="Total Cash Amount" textFill="#f2eded" AnchorPane.bottomAnchor="311.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="25.0">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="mAmountText" editable="false" labelFloat="true" layoutX="200.0" layoutY="178.0" prefHeight="86.0" prefWidth="300.0" promptText="\$">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton layoutX="586.0" layoutY="312.0" onAction="#NextScene" style="-fx-background-radius: 2em; -fx-border-radius: 2em; -fx-border-color: black; -fx-background-color: #d5cabd;" text="Ok">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="mReceiptPane" layoutX="10.0" layoutY="10.0" prefHeight="419.0" prefWidth="710.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton layoutX="29.0" layoutY="314.0" onAction="#Close" prefHeight="67.0" prefWidth="87.0" style="-fx-background-radius: 2em; -fx-border-radius: 2em; -fx-border-color: black; -fx-background-color: #fefedf;" text="No">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="586.0" layoutY="314.0" onAction="#Close" style="-fx-background-radius: 2em; -fx-border-radius: 2em; -fx-border-color: black; -fx-background-color: #d5cabd;" text="Yes">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="169.0" layoutY="90.0" text="Would you like a receipt?">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+            <Label layoutX="169.0" layoutY="169.0" prefHeight="86.0" prefWidth="375.0" text="Please consider the enviroment before printing it out" textFill="#99cf27" wrapText="true">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="409.0" prefWidth="700.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton layoutX="305.0" layoutY="289.0" onAction="#InitAmount" style="-fx-background-radius: 2em; -fx-border-radius: 2em; -fx-border-color: black; -fx-background-color: #d5cabd;" text="OK">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </JFXButton>
+            <Label alignment="CENTER" layoutX="8.0" layoutY="80.0" prefHeight="127.0" prefWidth="681.0" text="Please insert your money, from 10$ up to 5000$ once " textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+            <Label layoutX="146.0" layoutY="222.0" style="-fx-font-weight: bold;" text="Use currency support by bank only">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

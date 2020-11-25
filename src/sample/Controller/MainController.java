@@ -15,6 +15,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import sample.Models.TransactionModel;
 
@@ -57,7 +58,26 @@ public class MainController implements Initializable {
     @FXML
     private ComboBox mFilterTypeCB;
 
+    @FXML
+    private JFXButton mWithdrawalPopup;
+
+    @FXML
+    private JFXButton mDepositPopup;
+
+    @FXML
+    private JFXButton mTransferPopup;
+
+    @FXML
+    private JFXButton mProviderPaymentPopup;
+
+    @FXML
+    private JFXButton mChangeInfoBtn;
+
+    @FXML
+    private JFXButton mChangePINBtn;
+
     ObservableList<String> transactionTypeList = FXCollections.observableArrayList("Withdrawal","Transfer","Deposit","Payment","None");
+
     ObservableList<String> filterTypeList = FXCollections.observableArrayList("Date Time","Amount");
 
     private TransactionModel model;
@@ -123,6 +143,103 @@ public class MainController implements Initializable {
             stage.setScene(scene);
         }catch (IOException io){
             io.printStackTrace();
+        }
+    }
+
+    public void TransactionPopup(ActionEvent event) {
+        if(event.getSource() == mWithdrawalPopup)
+        {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/FormPopup/WithdrawalScene.fxml"));
+            Scene newScene;
+            try {
+                newScene = new Scene(loader.load());
+                Stage newStage = new Stage();
+                newStage.setScene(newScene);
+                newStage.setResizable(false);
+                newStage.initModality(Modality.APPLICATION_MODAL);
+                newStage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        if(event.getSource() == mDepositPopup)
+        {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/FormPopup/DepositScene.fxml"));
+            Scene newScene;
+            try {
+                newScene = new Scene(loader.load());
+                Stage newStage = new Stage();
+                newStage.setScene(newScene);
+                newStage.setResizable(false);
+                newStage.initModality(Modality.APPLICATION_MODAL);
+                newStage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        if(event.getSource() == mTransferPopup)
+        {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/FormPopup/TransferScene.fxml"));
+            Scene newScene;
+            try {
+                newScene = new Scene(loader.load());
+                Stage newStage = new Stage();
+                newStage.setScene(newScene);
+                newStage.setResizable(false);
+                newStage.initModality(Modality.APPLICATION_MODAL);
+                newStage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        if(event.getSource() == mProviderPaymentPopup)
+        {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/FormPopup/ProviderPaymentScene.fxml"));
+            Scene newScene;
+            try {
+                newScene = new Scene(loader.load());
+                Stage newStage = new Stage();
+                newStage.setScene(newScene);
+                newStage.setResizable(false);
+                newStage.initModality(Modality.APPLICATION_MODAL);
+                newStage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void AccountPopup(ActionEvent event)
+    {
+        if(event.getSource() == mChangeInfoBtn)
+        {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/FormPopup/ChangeInfo.fxml"));
+            Scene newScene;
+            try {
+                newScene = new Scene(loader.load());
+                Stage newStage = new Stage();
+                newStage.setScene(newScene);
+                newStage.setResizable(false);
+                newStage.initModality(Modality.APPLICATION_MODAL);
+                newStage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        if(event.getSource() == mChangePINBtn)
+        {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/FormPopup/ChangePin.fxml"));
+            Scene newScene;
+            try {
+                newScene = new Scene(loader.load());
+                Stage newStage = new Stage();
+                newStage.setScene(newScene);
+                newStage.setResizable(false);
+                newStage.initModality(Modality.APPLICATION_MODAL);
+                newStage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 }

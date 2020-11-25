@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="409.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.PopupController.LoadingController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="419.0" prefWidth="710.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Circle fx:id="mLoadingCircle" fill="WHITE" layoutX="350.0" layoutY="169.0" radius="144.0" strokeType="INSIDE" strokeWidth="20.0" style="-fx-stroke-dash-array: 90;">
+               <stroke>
+                  <LinearGradient endX="0.9857142857142858" endY="0.480952380952381" startX="0.5285714285714286" startY="0.04285714285714286">
+                     <stops>
+                        <Stop color="#7ed711" />
+                        <Stop color="#7961ad" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Circle>
+            <Label layoutX="295.0" layoutY="342.0" text="Loading">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
