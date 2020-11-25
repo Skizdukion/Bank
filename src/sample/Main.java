@@ -13,6 +13,7 @@ public class Main extends Application {
         Scene loginScene = new Scene(root);
         stage.setTitle("WKBank");
         stage.setScene(loginScene);
+        stage.setResizable(false);
         stage.show();
     }
 

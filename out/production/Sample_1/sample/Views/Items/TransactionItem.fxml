@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="65.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<HBox fx:id="mTransacionItem" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="65.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.ItemController">
    <children>
       <ImageView fitHeight="49.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -18,44 +18,44 @@
             <Insets left="10.0" />
          </HBox.margin>
       </ImageView>
-      <Label alignment="CENTER" minWidth="150.0" prefWidth="160.0" text="236410">
+      <Label fx:id="mTransactionID" alignment="CENTER" minWidth="150.0" prefWidth="170.0" text="236410">
          <font>
-            <Font size="20.0" />
-         </font>
-         <HBox.margin>
-            <Insets left="50.0" />
-         </HBox.margin>
-      </Label>
-      <Label alignment="CENTER" layoutX="63.0" layoutY="20.0" minWidth="150.0" prefWidth="160.0" text="Withdrawal">
-         <font>
-            <Font size="20.0" />
+            <Font size="25.0" />
          </font>
          <HBox.margin>
             <Insets />
          </HBox.margin>
       </Label>
-      <Label alignment="CENTER" layoutX="128.0" layoutY="20.0" maxWidth="200.0" minWidth="150.0" prefWidth="160.0" text="2,000,000$">
+      <Label fx:id="mTransactionType" alignment="CENTER" layoutX="63.0" layoutY="20.0" minWidth="150.0" prefWidth="170.0" text="Withdrawal">
          <font>
-            <Font size="20.0" />
+            <Font size="25.0" />
          </font>
          <HBox.margin>
             <Insets />
          </HBox.margin>
       </Label>
-      <Label alignment="CENTER" layoutX="228.0" layoutY="20.0" maxWidth="160.0" minWidth="150.0" prefWidth="160.0" text="28/11/2020">
+      <Label fx:id="mTransactionAmount" alignment="CENTER" layoutX="128.0" layoutY="20.0" maxWidth="200.0" minWidth="150.0" prefWidth="170.0" text="2,000,000$">
          <font>
-            <Font size="20.0" />
+            <Font size="25.0" />
          </font>
          <HBox.margin>
             <Insets />
          </HBox.margin>
       </Label>
-      <JFXButton ellipsisString="" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" style="-fx-border-color: black; -fx-border-radius: 2em; -fx-background-radius: 3em; -fx-background-color: #fefedf;" text="..">
+      <Label fx:id="mTransactionDateTime" alignment="CENTER" layoutX="228.0" layoutY="20.0" maxWidth="160.0" minWidth="150.0" prefWidth="170.0" text="28/11/2020">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+      </Label>
+      <JFXButton fx:id="mDetailBtn" ellipsisString="" maxWidth="50.0" minWidth="50.0" onAction="#DetailDisplay" prefWidth="50.0" style="-fx-border-color: black; -fx-border-radius: 2em; -fx-background-radius: 3em; -fx-background-color: #fefedf;" text="..">
          <font>
             <Font size="20.0" />
          </font>
          <HBox.margin>
-            <Insets />
+            <Insets left="10.0" />
          </HBox.margin>
          <graphic>
             <ImageView fitHeight="30.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
