@@ -8,8 +8,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import sample.Controller.LoginController;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -49,6 +51,9 @@ public class ProviderPaymentController implements Initializable {
     @FXML
     private JFXButton mPaymentAmountBtn;
 
+    @FXML
+    private Label mFundsLabel;
+
     ObservableList<String> providerList;
 
     @Override
@@ -56,6 +61,7 @@ public class ProviderPaymentController implements Initializable {
         providerList = FXCollections.observableArrayList("Viettel","Vinaphone","FPT","Shit","I","Dont","know");
         mProviderCB.setValue("Viettel");
         mProviderCB.setItems(providerList);
+        mFundsLabel.setText(LoginController.userData.getBalance()+"$");
     }
 
     public void Close(ActionEvent event) {

@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="500.0" style="-fx-background-color: #d5e9f1;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.PopupController.ChangeInfoController" >
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="500.0" style="-fx-background-color: #d5e9f1;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.PopupController.ChangeInfoController">
    <children>
       <JFXButton layoutX="249.0" layoutY="730.0" onAction="#Save" style="-fx-background-radius: 2em; -fx-border-radius: 2em; -fx-border-color: black; -fx-background-color: #d5cabd;" text="Save">
          <font>
@@ -96,7 +96,7 @@
                   <Insets />
                </opaqueInsets>
             </Label>
-            <Label alignment="CENTER_RIGHT" layoutX="170.0" layoutY="30.0" prefHeight="51.0" prefWidth="299.0" text="None change" AnchorPane.rightAnchor="10.0">
+            <Label fx:id="mNameLabel" alignment="CENTER_RIGHT" layoutX="170.0" layoutY="30.0" prefHeight="51.0" prefWidth="299.0" AnchorPane.rightAnchor="10.0">
                <font>
                   <Font size="21.0" />
                </font>
@@ -107,7 +107,7 @@
                   <Insets />
                </opaqueInsets>
             </Label>
-            <Label alignment="CENTER_RIGHT" layoutX="170.0" layoutY="130.0" prefHeight="51.0" prefWidth="299.0" text="None change" AnchorPane.rightAnchor="10.0">
+            <Label fx:id="mPIDLabel" alignment="CENTER_RIGHT" layoutX="170.0" layoutY="130.0" prefHeight="51.0" prefWidth="299.0" AnchorPane.rightAnchor="10.0">
                <font>
                   <Font size="21.0" />
                </font>
@@ -118,7 +118,7 @@
                   <Insets />
                </opaqueInsets>
             </Label>
-            <Label alignment="CENTER_RIGHT" layoutX="165.0" layoutY="230.0" prefHeight="51.0" prefWidth="299.0" text="None change" AnchorPane.rightAnchor="10.0">
+            <Label fx:id="mMemberSinceLabel" alignment="CENTER_RIGHT" layoutX="165.0" layoutY="230.0" prefHeight="51.0" prefWidth="299.0" AnchorPane.rightAnchor="10.0">
                <font>
                   <Font size="21.0" />
                </font>
@@ -129,15 +129,15 @@
                   <Insets />
                </opaqueInsets>
             </Label>
-            <JFXTextField layoutX="175.0" layoutY="330.0" prefHeight="51.0" prefWidth="299.0" AnchorPane.rightAnchor="10.0">
+            <JFXTextField fx:id="mEmailText" layoutX="175.0" layoutY="330.0" prefHeight="51.0" prefWidth="299.0" AnchorPane.rightAnchor="10.0">
                <font>
                   <Font size="21.0" />
                </font></JFXTextField>
-            <JFXTextField layoutX="165.0" layoutY="430.0" prefHeight="51.0" prefWidth="299.0" AnchorPane.rightAnchor="10.0">
+            <JFXTextField fx:id="mAddressText" layoutX="165.0" layoutY="430.0" prefHeight="51.0" prefWidth="299.0" AnchorPane.rightAnchor="10.0">
                <font>
                   <Font size="21.0" />
                </font></JFXTextField>
-            <JFXTextField layoutX="165.0" layoutY="530.0" prefHeight="51.0" prefWidth="299.0" AnchorPane.rightAnchor="10.0">
+            <JFXTextField fx:id="mPhoneText" layoutX="165.0" layoutY="530.0" prefHeight="51.0" prefWidth="299.0" AnchorPane.rightAnchor="10.0">
                <font>
                   <Font size="21.0" />
                </font></JFXTextField>

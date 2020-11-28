@@ -4,80 +4,65 @@ import javafx.beans.value.ObservableValue;
 
 public class TransactionModel {
     private String transactionID;
-    private String type;
-    private String amount;
-    private String exeDate;
+
     private String atmID;
-    private String customerID;
-    private String additionalData;
+
+    private String accountID;
+
+    private String transactionType;
+
+    private String recipientID;
+
+    private String paymentID;
+
+    private String amount;
+
+    private String exeDate;
 
     public TransactionModel() {
 
     }
 
-    public TransactionModel(String transactionID, String type, String amount, String exeDate, String atmID, String customerID, String additionalData) {
+    public TransactionModel(String transactionID, String atmID, String accountID, String transactionType, String recipientID, String paymentID, String amount, String exeDate) {
         this.transactionID = transactionID;
-        this.type = type;
+        this.atmID = atmID;
+        this.accountID = accountID;
+        this.transactionType = transactionType;
+        this.recipientID = recipientID;
+        this.paymentID = paymentID;
         this.amount = amount;
         this.exeDate = exeDate;
-        this.atmID = atmID;
-        this.customerID = customerID;
-        this.additionalData = additionalData;
     }
 
     public String getTransactionID() {
         return transactionID;
     }
 
-    public void setTransactionID(String transactionID) {
-        this.transactionID = transactionID;
+    public String getAtmID() {
+        return atmID;
     }
 
-    public String getType() {
-        return type;
+    public String getAccountID() {
+        return accountID;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public String getTransactionType() {
+        return transactionType;
+    }
+
+    public String getRecipientID() {
+        return recipientID;
+    }
+
+    public String getPaymentID() {
+        return paymentID;
     }
 
     public String getAmount() {
         return amount;
     }
 
-    public void setAmount(String amount) {
-        this.amount = amount;
-    }
-
     public String getExeDate() {
         return exeDate;
-    }
-
-    public void setExeDate(String exeDate) {
-        this.exeDate = exeDate;
-    }
-
-    public String getAtmID() {
-        return atmID;
-    }
-
-    public void setAtmID(String atmID) {
-        this.atmID = atmID;
-    }
-
-    public String getCustomerID() {
-        return customerID;
-    }
-
-    public void setCustomerID(String customerID) {
-        this.customerID = customerID;
-    }
-
-    public String getAdditionalData() {
-        return additionalData;
-    }
-
-    public void setAdditionalData(String additionalData) {
-        this.additionalData = additionalData;
     }
 }

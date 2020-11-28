@@ -52,6 +52,7 @@ public class DepositController implements Initializable {
         int int_random = rand.nextInt(upperbound) + 10;
         mAmountText.setText(int_random+"");
         mAmountPane.toFront();
+        //cap nhat o day
     }
 
 }

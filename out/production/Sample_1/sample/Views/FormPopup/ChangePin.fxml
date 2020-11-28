@@ -63,17 +63,17 @@
                   <Insets />
                </opaqueInsets>
             </Label>
-            <JFXPasswordField layoutX="166.0" layoutY="35.0" prefHeight="51.0" prefWidth="299.0" AnchorPane.rightAnchor="10.0">
+            <JFXPasswordField fx:id="mPIN" layoutX="166.0" layoutY="35.0" prefHeight="51.0" prefWidth="299.0" AnchorPane.rightAnchor="10.0">
                <font>
                   <Font size="21.0" />
                </font>
             </JFXPasswordField>
-            <JFXPasswordField layoutX="166.0" layoutY="135.0" prefHeight="51.0" prefWidth="299.0">
+            <JFXPasswordField fx:id="mNewPIN" layoutX="166.0" layoutY="135.0" prefHeight="51.0" prefWidth="299.0">
                <font>
                   <Font size="21.0" />
                </font>
             </JFXPasswordField>
-            <JFXPasswordField layoutX="166.0" layoutY="235.0" prefHeight="51.0" prefWidth="299.0">
+            <JFXPasswordField fx:id="mConfirmPIN" layoutX="166.0" layoutY="235.0" prefHeight="51.0" prefWidth="299.0">
                <font>
                   <Font size="21.0" />
                </font>

@@ -35,7 +35,6 @@ public class ItemController implements Initializable {
     @FXML
     private Label mTransactionDateTime;
 
-
     static private TransactionModel model;
 
     @Override
@@ -66,7 +65,7 @@ public class ItemController implements Initializable {
     private void loadData()
     {
         mTransactionID.setText(model.getTransactionID());
-        mTransactionType.setText(model.getType());
+        mTransactionType.setText(model.getTransactionType());
         mTransactionAmount.setText(model.getAmount());
         mTransactionDateTime.setText(model.getExeDate());
     }

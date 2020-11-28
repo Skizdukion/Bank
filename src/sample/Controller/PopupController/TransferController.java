@@ -5,8 +5,10 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import sample.Controller.LoginController;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -40,9 +42,12 @@ public class TransferController implements Initializable {
     @FXML
     private AnchorPane mRecipientPane;
 
+    @FXML
+    private Label mFundsLabel;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        mFundsLabel.setText(LoginController.userData.getBalance()+"$");
     }
 
     public void ClearText(ActionEvent event) {

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mCreateTransactionPane" prefHeight="720.0" prefWidth="840.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Views.SideScene.CreateTransaction.CreateTransactionController">
+   <children>
+      <AnchorPane layoutX="45.0" layoutY="39.0" prefHeight="120.0" prefWidth="840.0" style="-fx-background-color: #845EC2;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="27.0" layoutY="38.0" text="Please chose type of transaction" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="30.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="203.0" layoutY="217.0" prefHeight="600.0" prefWidth="840.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <JFXButton fx:id="mWithdrawalPopup" layoutX="98.0" layoutY="151.0" onAction="#TransactionPopup" prefHeight="125.0" prefWidth="300.0" style="-fx-background-radius: 2em; -fx-border-radius: 2em; -fx-border-color: black; -fx-background-color: #f3c5ff;" text="Withdrawal" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="125.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="mDepositPopup" layoutX="461.0" layoutY="160.0" onAction="#TransactionPopup" prefHeight="125.0" prefWidth="300.0" style="-fx-background-radius: 2em; -fx-border-radius: 2em; -fx-border-color: black; -fx-background-color: #00c9a7;" text="Deposit" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="125.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="mTransferPopup" layoutX="98.0" layoutY="416.0" onAction="#TransactionPopup" prefHeight="125.0" prefWidth="300.0" style="-fx-background-radius: 2em; -fx-border-radius: 2em; -fx-border-color: black; -fx-background-color: #fefedf;" text="Transfer" AnchorPane.bottomAnchor="125.0" AnchorPane.leftAnchor="50.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="mProviderPaymentPopup" layoutX="451.0" layoutY="416.0" onAction="#TransactionPopup" prefHeight="125.0" prefWidth="300.0" style="-fx-background-radius: 2em; -fx-border-radius: 2em; -fx-border-color: black; -fx-background-color: #d7e8f0;" text="Provider Payment" AnchorPane.bottomAnchor="125.0" AnchorPane.rightAnchor="50.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="182.0" layoutY="41.0" text="Current balance:">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="mFundsLabel" layoutX="451.0" layoutY="41.0" text="1,0000,000 $">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
